@@ -1,0 +1,16 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "primavera_integration"
+authors = [
+    { name = "Raissyon Trading & Contracting Co." }
+]
+description = "Primavera P6 <-> ERPNext integration (Phase 1: XER import, staging, mapping)"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[tool.bench.dev-dependencies]

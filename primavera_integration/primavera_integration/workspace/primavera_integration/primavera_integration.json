@@ -1,0 +1,195 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"header-1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Primavera Integration</b></span>\",\"col\":12}},{\"id\":\"para-1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Import Primavera P6 schedules (XER), review mappings, and inspect sync history.\",\"col\":12}},{\"id\":\"card-import\",\"type\":\"card\",\"data\":{\"card_name\":\"Import\",\"col\":4}},{\"id\":\"card-staging\",\"type\":\"card\",\"data\":{\"card_name\":\"Primavera Data (Staging)\",\"col\":4}},{\"id\":\"card-mapping\",\"type\":\"card\",\"data\":{\"card_name\":\"Mapping\",\"col\":4}},{\"id\":\"card-sync\",\"type\":\"card\",\"data\":{\"card_name\":\"Sync History\",\"col\":6}},{\"id\":\"card-settings\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":6}}]",
+ "creation": "2026-09-13 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "project",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Primavera Integration",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Import",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera Import",
+   "link_count": 0,
+   "link_to": "Primavera Import",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera Data (Staging)",
+   "link_count": 4,
+   "link_type": "DocType",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera Projects",
+   "link_count": 0,
+   "link_to": "Primavera Project",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera WBS Nodes",
+   "link_count": 0,
+   "link_to": "Primavera WBS Node",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera Activities",
+   "link_count": 0,
+   "link_to": "Primavera Activity",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Primavera Resources",
+   "link_count": 0,
+   "link_to": "Primavera Resource",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mapping",
+   "link_count": 3,
+   "link_type": "DocType",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Mapping",
+   "link_count": 0,
+   "link_to": "Project Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity Mapping",
+   "link_count": 0,
+   "link_to": "Activity Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resource Mapping",
+   "link_count": 0,
+   "link_to": "Resource Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sync History",
+   "link_count": 3,
+   "link_type": "DocType",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sync Runs",
+   "link_count": 0,
+   "link_to": "Sync Run",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sync Logs",
+   "link_count": 0,
+   "link_to": "Sync Log",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sync Conflicts",
+   "link_count": 0,
+   "link_to": "Sync Conflict",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Integration Settings",
+   "link_count": 0,
+   "link_to": "Primavera Integration Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Primavera Integration",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Primavera Integration Manager"
+  },
+  {
+   "role": "Primavera Integration User"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Import XER",
+   "link_to": "primavera-import-wizard",
+   "type": "Page"
+  }
+ ],
+ "title": "Primavera Integration"
+}

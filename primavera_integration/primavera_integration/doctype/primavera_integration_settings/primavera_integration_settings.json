@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "integration_enabled",
+  "sandbox_mode",
+  "column_break_1",
+  "integration_method",
+  "automatic_sync_enabled",
+  "sync_frequency",
+  "section_break_defaults",
+  "default_company",
+  "default_project_type",
+  "column_break_2",
+  "default_conflict_strategy",
+  "wbs_mapping_strategy",
+  "section_break_api",
+  "primavera_endpoint",
+  "authentication_method",
+  "credentials_reference",
+  "section_break_meta",
+  "last_successful_sync"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "integration_enabled",
+   "fieldtype": "Check",
+   "label": "Integration Enabled"
+  },
+  {
+   "default": "1",
+   "description": "While enabled, no ERPNext Project or Task will be created or updated by any sync. Staging data, Sync Runs and Sync Logs are still generated.",
+   "fieldname": "sandbox_mode",
+   "fieldtype": "Check",
+   "label": "Sandbox Mode (Dry Run)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "XER",
+   "fieldname": "integration_method",
+   "fieldtype": "Select",
+   "label": "Integration Method",
+   "options": "XER\nXML\nAPI",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Independent kill-switch for scheduled/automatic sync jobs, separate from Integration Enabled.",
+   "fieldname": "automatic_sync_enabled",
+   "fieldtype": "Check",
+   "label": "Automatic Synchronization Enabled"
+  },
+  {
+   "default": "Manual",
+   "depends_on": "automatic_sync_enabled",
+   "fieldname": "sync_frequency",
+   "fieldtype": "Select",
+   "label": "Sync Frequency",
+   "options": "Hourly\nEvery 6 Hours\nDaily\nManual"
+  },
+  {
+   "fieldname": "section_break_defaults",
+   "fieldtype": "Section Break",
+   "label": "Defaults for New ERPNext Projects"
+  },
+  {
+   "fieldname": "default_company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_project_type",
+   "fieldtype": "Link",
+   "label": "Default Project Type",
+   "options": "Project Type"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Manual Review",
+   "fieldname": "default_conflict_strategy",
+   "fieldtype": "Select",
+   "label": "Default Conflict Strategy",
+   "options": "Primavera Wins\nERPNext Wins\nManual Review"
+  },
+  {
+   "default": "Activities Only",
+   "description": "Full Hierarchy: every Primavera WBS node becomes an ERPNext Task. Activities Only: WBS is kept in staging only; just Activities become Tasks.",
+   "fieldname": "wbs_mapping_strategy",
+   "fieldtype": "Select",
+   "label": "WBS Mapping Strategy",
+   "options": "Full Hierarchy\nActivities Only",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.integration_method=='API'",
+   "fieldname": "section_break_api",
+   "fieldtype": "Section Break",
+   "label": "API Connection (only used when Integration Method = API)"
+  },
+  {
+   "fieldname": "primavera_endpoint",
+   "fieldtype": "Data",
+   "label": "Primavera Endpoint URL"
+  },
+  {
+   "fieldname": "authentication_method",
+   "fieldtype": "Select",
+   "label": "Authentication Method",
+   "options": "\nBasic\nOAuth2\nToken"
+  },
+  {
+   "description": "Stored encrypted. Never exposed to client-side scripts and never written to Sync Logs.",
+   "fieldname": "credentials_reference",
+   "fieldtype": "Password",
+   "label": "Credentials"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_meta",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "last_successful_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Successful Sync",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Primavera Integration Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Primavera Integration User"
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

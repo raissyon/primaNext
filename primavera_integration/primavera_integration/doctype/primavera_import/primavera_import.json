@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "xer_file",
+  "file_url",
+  "column_break_1",
+  "import_date",
+  "imported_by",
+  "status",
+  "section_break_project",
+  "selected_primavera_project",
+  "column_break_2",
+  "project_mode",
+  "target_erpnext_project",
+  "new_project_name",
+  "section_break_preview",
+  "preview_status",
+  "preview_summary",
+  "section_break_sync",
+  "sync_run",
+  "column_break_3",
+  "error_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "xer_file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "XER File",
+   "reqd": 1
+  },
+  {
+   "fieldname": "file_url",
+   "fieldtype": "Data",
+   "label": "File URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "import_date",
+   "fieldtype": "Datetime",
+   "label": "Import Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "imported_by",
+   "fieldtype": "Link",
+   "label": "Imported By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "Uploaded",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Uploaded\nParsing\nParsed\nPreview Ready\nSyncing\nCompleted\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_project",
+   "fieldtype": "Section Break",
+   "label": "Project Selection"
+  },
+  {
+   "description": "The Primavera Project ID found inside the XER, once parsed. A single XER can contain more than one project; Phase 1 imports one project per Primavera Import record.",
+   "fieldname": "selected_primavera_project",
+   "fieldtype": "Link",
+   "label": "Selected Primavera Project",
+   "options": "Primavera Project"
+  },
+  {
+   "default": "Existing Project",
+   "fieldname": "project_mode",
+   "fieldtype": "Select",
+   "label": "ERPNext Project Mode",
+   "options": "Existing Project\nCreate New Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.project_mode=='Existing Project'",
+   "fieldname": "target_erpnext_project",
+   "fieldtype": "Link",
+   "label": "Target ERPNext Project",
+   "mandatory_depends_on": "eval:doc.project_mode=='Existing Project'",
+   "options": "Project"
+  },
+  {
+   "depends_on": "eval:doc.project_mode=='Create New Project'",
+   "fieldname": "new_project_name",
+   "fieldtype": "Data",
+   "label": "New Project Name",
+   "mandatory_depends_on": "eval:doc.project_mode=='Create New Project'"
+  },
+  {
+   "fieldname": "section_break_preview",
+   "fieldtype": "Section Break",
+   "label": "Preview"
+  },
+  {
+   "default": "Not Generated",
+   "fieldname": "preview_status",
+   "fieldtype": "Select",
+   "label": "Preview Status",
+   "options": "Not Generated\nGenerating\nReady\nStale",
+   "read_only": 1
+  },
+  {
+   "description": "Counts of Create / Update / Unchanged / Conflict / Deleted, filled in once the preview engine runs (Phase 2).",
+   "fieldname": "preview_summary",
+   "fieldtype": "Code",
+   "label": "Preview Summary (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sync",
+   "fieldtype": "Section Break",
+   "label": "Sync"
+  },
+  {
+   "fieldname": "sync_run",
+   "fieldtype": "Link",
+   "label": "Sync Run",
+   "options": "Sync Run",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Primavera Import",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Primavera Integration User",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

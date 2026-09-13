@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "field:primavera_activity_id",
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "primavera_activity_id",
+  "primavera_project",
+  "primavera_wbs",
+  "activity_name",
+  "column_break_1",
+  "activity_type",
+  "activity_status",
+  "percent_complete",
+  "section_break_dates",
+  "planned_start",
+  "planned_finish",
+  "column_break_2",
+  "actual_start",
+  "actual_finish",
+  "section_break_duration",
+  "planned_duration",
+  "remaining_duration",
+  "section_break_deps",
+  "predecessor_ids",
+  "successor_ids",
+  "section_break_mapping",
+  "erpnext_task",
+  "column_break_3",
+  "source_hash",
+  "last_imported_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "primavera_activity_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primavera Activity ID",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "primavera_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primavera Project",
+   "options": "Primavera Project",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "primavera_wbs",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Primavera WBS Node",
+   "options": "Primavera WBS Node"
+  },
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Task",
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "label": "Activity Type",
+   "options": "Task\nMilestone\nLOE\nWBS Summary"
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "activity_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Activity Status",
+   "options": "Not Started\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "Percent Complete"
+  },
+  {
+   "fieldname": "section_break_dates",
+   "fieldtype": "Section Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "planned_start",
+   "fieldtype": "Date",
+   "label": "Planned Start"
+  },
+  {
+   "fieldname": "planned_finish",
+   "fieldtype": "Date",
+   "label": "Planned Finish"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_start",
+   "fieldtype": "Date",
+   "label": "Actual Start"
+  },
+  {
+   "fieldname": "actual_finish",
+   "fieldtype": "Date",
+   "label": "Actual Finish"
+  },
+  {
+   "fieldname": "section_break_duration",
+   "fieldtype": "Section Break",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "planned_duration",
+   "fieldtype": "Float",
+   "label": "Planned Duration (hours)"
+  },
+  {
+   "fieldname": "remaining_duration",
+   "fieldtype": "Float",
+   "label": "Remaining Duration (hours)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_deps",
+   "fieldtype": "Section Break",
+   "label": "Dependencies (staged for future use)"
+  },
+  {
+   "fieldname": "predecessor_ids",
+   "fieldtype": "Small Text",
+   "label": "Predecessor Activity IDs (JSON list)"
+  },
+  {
+   "fieldname": "successor_ids",
+   "fieldtype": "Small Text",
+   "label": "Successor Activity IDs (JSON list)"
+  },
+  {
+   "fieldname": "section_break_mapping",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Mapping"
+  },
+  {
+   "fieldname": "erpnext_task",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ERPNext Task",
+   "options": "Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_hash",
+   "fieldtype": "Data",
+   "label": "Source Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_imported_on",
+   "fieldtype": "Datetime",
+   "label": "Last Imported On",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Primavera Activity",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Primavera Integration User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "autoname": "format:AM-{primavera_activity}",
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "primavera_activity",
+  "erpnext_task",
+  "column_break_1",
+  "project_mapping",
+  "sync_direction_last",
+  "section_break_hash",
+  "last_synced_hash"
+ ],
+ "fields": [
+  {
+   "fieldname": "primavera_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primavera Activity",
+   "options": "Primavera Activity",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "erpnext_task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ERPNext Task",
+   "options": "Task",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_mapping",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project Mapping",
+   "options": "Project Mapping"
+  },
+  {
+   "fieldname": "sync_direction_last",
+   "fieldtype": "Select",
+   "label": "Last Sync Direction",
+   "options": "P6 to ERPNext\nERPNext to P6",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_hash",
+   "fieldtype": "Section Break",
+   "label": "Change Detection"
+  },
+  {
+   "description": "Hash of the mapped field values as of the last successful sync. Used to detect which side changed on the next run.",
+   "fieldname": "last_synced_hash",
+   "fieldtype": "Data",
+   "label": "Last Synced Hash",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Activity Mapping",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Primavera Integration User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

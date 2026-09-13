@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "autoname": "field:primavera_project_id",
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "primavera_project_id",
+  "project_name",
+  "project_short_name",
+  "column_break_1",
+  "status",
+  "data_date",
+  "section_break_dates",
+  "planned_start_date",
+  "planned_end_date",
+  "section_break_mapping",
+  "erpnext_project",
+  "column_break_2",
+  "last_imported_on",
+  "source_hash",
+  "section_break_raw",
+  "raw_payload"
+ ],
+ "fields": [
+  {
+   "fieldname": "primavera_project_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primavera Project ID",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_short_name",
+   "fieldtype": "Data",
+   "label": "Project Short Name"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nWhat-If"
+  },
+  {
+   "description": "Primavera's 'as of' date for this schedule, used for progress calculations.",
+   "fieldname": "data_date",
+   "fieldtype": "Date",
+   "label": "Data Date"
+  },
+  {
+   "fieldname": "section_break_dates",
+   "fieldtype": "Section Break",
+   "label": "Schedule Dates"
+  },
+  {
+   "fieldname": "planned_start_date",
+   "fieldtype": "Date",
+   "label": "Planned Start Date"
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "label": "Planned End Date"
+  },
+  {
+   "fieldname": "section_break_mapping",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Mapping"
+  },
+  {
+   "fieldname": "erpnext_project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ERPNext Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_imported_on",
+   "fieldtype": "Datetime",
+   "label": "Last Imported On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_hash",
+   "fieldtype": "Data",
+   "label": "Source Hash",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_raw",
+   "fieldtype": "Section Break",
+   "label": "Raw Data"
+  },
+  {
+   "fieldname": "raw_payload",
+   "fieldtype": "Code",
+   "label": "Raw Payload (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  }
+ ],
+ "in_create": 0,
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Primavera Project",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Primavera Integration User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

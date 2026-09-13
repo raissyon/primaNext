@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "autoname": "format:PM-{primavera_project}",
+ "creation": "2026-09-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "primavera_project",
+  "erpnext_project",
+  "column_break_1",
+  "mapping_status",
+  "section_break_overrides",
+  "field_conflict_strategy_override"
+ ],
+ "fields": [
+  {
+   "fieldname": "primavera_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primavera Project",
+   "options": "Primavera Project",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "erpnext_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ERPNext Project",
+   "options": "Project",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Auto-Mapped",
+   "fieldname": "mapping_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mapping Status",
+   "options": "Auto-Mapped\nManually Confirmed\nConflict"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_overrides",
+   "fieldtype": "Section Break",
+   "label": "Field-Level Conflict Overrides"
+  },
+  {
+   "fieldname": "field_conflict_strategy_override",
+   "fieldtype": "Table",
+   "label": "Overrides",
+   "options": "Project Mapping Field Override"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Primavera Integration",
+ "name": "Project Mapping",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Primavera Integration Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Primavera Integration User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
